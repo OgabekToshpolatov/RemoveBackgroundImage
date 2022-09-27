@@ -1,0 +1,16 @@
+@model Photo
+
+<form method="post" enctype="multipart/form-data">
+    <div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">Remove background</h2>
+			<hr />
+		</div>
+        <div class="mb-3">
+			<label asp-for="Images"></label>
+			<input type="file" accept="image/*" asp-for="Images" class="form-control" multiple="multiple"/>
+			<span asp-validation-for="Images" class="text-danger"></span>
+		</div>
+		<button type="submit" class="btn btn-primary" style="width:150px">Remove</button>
+	</div>
+</form>
